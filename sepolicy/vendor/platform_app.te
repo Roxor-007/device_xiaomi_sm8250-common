@@ -20,3 +20,7 @@ allow platform_app sysfs_msm_subsys:dir { search };
 
 # Allow zygote unix_stream_socket
 allow platform_app zygote:unix_stream_socket getopt;
+
+# Dolby Sepolicy
+allow platform_app hal_dms_hwservice:hwservice_manager find;
+allow platform_app hal_dms_default:binder { call transfer };
