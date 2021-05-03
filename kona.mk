@@ -231,6 +231,7 @@ PRODUCT_PACKAGES += \
     memtrack.kona
 
 PRODUCT_PACKAGES += \
+    android.hardware.memtrack-service.example \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
     libdisplayconfig.system.qti \
