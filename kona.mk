@@ -240,6 +240,11 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libtinyxml \
+    libtinyxml.vendor \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
     libvulkan \
     vendor.display.config@1.5 \
     vendor.display.config@1.11.vendor \
