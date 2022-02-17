@@ -115,6 +115,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
 
 PRODUCT_PACKAGES += \
+    BluetoothQti \
     liba2dpoffload \
     libaudiopreprocessing \
     libbatterylistener \
