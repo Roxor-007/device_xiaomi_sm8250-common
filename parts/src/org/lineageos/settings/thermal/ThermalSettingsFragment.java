@@ -63,6 +63,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
     private RecyclerView mAppsRecyclerView;
 
     private ThermalUtils mThermalUtils;
+    private RecyclerView mAppsRecyclerView;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -302,16 +303,13 @@ public class ThermalSettingsFragment extends PreferenceFragment
             return mEntries.get(position).id;
         }
 
-        @NonNull
+	@NonNull
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            ViewHolder holder = new ViewHolder(LayoutInflater.from(parent.getContext())
+            return new ViewHolder(LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.thermal_list_item, parent, false));
-            Context context = holder.itemView.getContext();
-            holder.mode.setAdapter(new ModeAdapter(context));
-            holder.mode.setOnItemSelectedListener(this);
-            return holder;
         }
+
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
@@ -320,7 +318,8 @@ public class ThermalSettingsFragment extends PreferenceFragment
             if (entry == null) {
                 return;
             }
-
+            holder.mode.setAdapter(new ModeAdapter(context));
+            holder.mode.setOnItemSelectedListener(this);
             holder.title.setText(entry.label);
             holder.title.setOnClickListener(v -> holder.mode.performClick());
             mApplicationsState.ensureIcon(entry);
