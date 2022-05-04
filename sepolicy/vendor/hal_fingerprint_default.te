@@ -32,3 +32,7 @@ allow hal_fingerprint_default vendor_sysfs_spss:dir { search };
 allow hal_fingerprint_default vendor_sysfs_spss:file { open read };
 
 get_prop(hal_fingerprint_default, vendor_fod_prop);
+
+binder_call(hal_fingerprint_default, vendor_hal_perf_default)
+
+dontaudit hal_fingerprint_default default_prop:file { read };
