@@ -290,13 +290,15 @@ PRODUCT_PACKAGES += \
     extphonelib_product.xml \
     libvulkan \
     vendor.display.config@1.5 \
-    vendor.display.config@1.11.vendor \
+    vendor.display.config@1.16.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.3.vendor \
+    vendor.qti.hardware.display.demura@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml
